@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# Cache Manifest v5
+
+CACHE:
+css/normalize.css
+css/main.css
+
+
+
+FALLBACK:
+/ /offline.html
+NETWORK:
+*

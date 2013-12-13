@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>LOTTO - Medici Software Ltd</title>
+<meta name="description" content="">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<script>
+var userAgentInfo = navigator.userAgent,
+           Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"),
+           flag = true;
+           for (var v = 0; v < Agents.length; v++) { 
+               if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                    flag = false;break; 
+               } 
+           } 
+           if(!flag){
+              // window.location.href='';
+}
+</script>
+<!--[if lt IE 9]>
+<script src="Scripts/Package/html5.js"></script>
+<script src="Scripts/Package/css3-mediaqueries.js"></script>
+<![endif]-->
+<link rel="Bookmark" href="favicon.ico">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon" />
+<link id="favicon" href="favicon.ico" rel="icon" type="image/x-icon" />
+<!--[if IE]>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<![endif]-->
+<link rel="stylesheet" href="Css/normalize.css">
+<link rel="stylesheet" href="Css/main.css">
+<script src="Scripts/Package/modernizr-2.6.2.min.js"></script>
+</head>
+<body style="background:url(Media/bg2.png) center bottom no-repeat;">
+<!--[if lt IE 7]>
+   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<header id="headerMenu">
+	<div class="mtop">
+        <h1 id="lotteryNo" class="lotteryNo">Lottery</h1>
+        <div class="BtnListFunB">
+          <a href="javascript:void(0);" target="_self" class="btnA" id="LogHistory">Lucky Star Record</a>
+          <a href="javascript:void(0);" target="_self" style=" display:none;" class="btnB" id="PrizeHistory">Prize Record</a>
+          <a href="javascript:void(0);" target="_self" class="btnB" id="LogIn">LogIn</a>
+        </div>
+        <div class="blank0"></div>
+        <div id="logHistoryList">
+            <h2 class="title">Lucky Star Record</h2>
+            <div class="loglist">
+               <div class="Hcolumn"><span class="w20">Periods</span><span class="w30">Lucky star name</span><span class="w30">Prize name</span></div>
+               <ol class="Hlist">
+                  <li><span class="w20">No.0000</span><span class="w30">VCVADF</span><span class="w30">Prize nameASDFSD</span></li>
+               </ol>
+            </div>
+            <div class="BtnListFunB">
+                <a href="javascript:void(0);" target="_self" class="btnC" id="CloseLuckyLog">Close</a>
+            </div>
+        </div>
+	</div>
+	<div class="clearfix"></div>
+</header>
+<div class="contentm" id="pageContent">
+	<section class="lotteryBody">
+		<div id="lotteryBody" class="luckyStarList">
+        <div><img src="Media/defaultImg.png" alt=""><span>Loading Data....</span></div>
+    </div>
+    <div id="lotteryBodyP2">
+        <div id="luckyStarPeople"></div>
+        <div id="luckyPrize"></div>
+    </div>
+    <div class="blank24"></div>
+    <div id="LuckyNowResult">
+        <ol>
+            
+        </ol>
+    </div>
+    <div class="BtnListFunA">
+      <a href="javascript:void(0);" target="_self" class="btnS" id="lotteryButton">Lotto Start</a>
+      <a href="javascript:void(0);" target="_self" class="btnSP" id="PrizeButton">Prize Roll Start</a>
+    </div>
+	</section>
+    <aside id="PrizeList" class="PList">
+        <h2 class="PrizeListTitle">Loading Data....</h2>
+        <ul>
+            <li class="choice">Loading Data....
+            </li>
+        </ul>
+    </aside>    
+    <div class="blank0"></div>
+</div>
+<!--footer sitemap-->
+<footer>
+	<div class="mbottom">
+		
+	</div>
+</footer>
+<script src="Scripts/Package/jquery-2.0.3.min.js"></script> 
+<script src="Scripts/Package/jquery-migrate-1.2.1.min.js"></script> 
+<script src="Scripts/main.js"></script> 
+<script>
+
+/*
+  @2013.12.11
+  author: isaac.ho@medici-software.com
+  optimization with plugin for  next version;
+*/
+$(document).ready(function($) {
+  var dataTmp;
+  loadLottery(dataTmp);
+  /*$.ajax({
+    url: '/path/to/file',
+    type: 'default GET (Other values: POST)',
+    dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+    data: {param1: 'value1'},
+  })
+  .done(function() {
+    loadLottery(dataTmp);
+    console.log("success");
+  })
+  .fail(function() {
+    console.log("error");
+  })
+  .always(function() {
+    console.log("complete");
+  });*/
+
+  
+  
+  
+});
+
+function loadLottery(dataTmp){
+  dataTmp = {
+    "lotteryNo":"0001",
+    "PrizeList":[
+      {"name":"iPad Bigger","ItemNo":"0001","state":"0","pic":"Media/prize.jpg","text":"得此神器必须请全公司吃饭终生"},
+      {"name":"iPhone 6x S(1TB)","ItemNo":"0s02","state":"0","pic":"Media/prize.jpg","text":"得此神器必须请全公司吃饭9次"},
+      {"name":"iMac 2014s","ItemNo":"0c03","state":"0","pic":"Media/prize.jpg","text":"得此神器必须请全公司吃饭2次"},
+      {"name":"Mac less","ItemNo":"00cb1","state":"0","pic":"Media/prize.jpg","text":"得此神器必须请全公司吃饭9次"},
+      {"name":"Euro 100","ItemNo":"00c1","state":"0","pic":"Media/prize.jpg","text":"得此神器必须请全公司吃饭13次"},
+      {"name":"Annual Leave of 1 Year","ItemNo":"0ba1","state":"0","pic":"Media/prize.jpg","text":"得此神器必须请全公司吃饭一年"}
+    ],
+    "list":[
+    {
+      "name":"text1",
+      "no":"0001",
+      "state":"0",
+    },{
+      "name":"text2",
+      "no":"0002",
+      "state":"0",
+    },{
+      "name":"text3",
+      "no":"0003",
+      "state":"0",
+    },{
+      "name":"text4",
+      "no":"0004",
+      "state":"0",
+    },{
+      "name":"text5",
+      "no":"0005",
+      "state":"0",
+    },{
+      "name":"text8",
+      "no":"0006",
+      "state":"0",
+    },{
+      "name":"text9",
+      "no":"0007",
+      "state":"0",
+    },{
+      "name":"text8",
+      "no":"0008",
+      "state":"0",
+    },{
+      "name":"text9",
+      "no":"0009",
+      "state":"0",
+    },{
+      "name":"text10",
+      "no":"00010",
+      "state":"0",
+    },{
+      "name":"text11",
+      "no":"00011",
+      "state":"0",
+    },{
+      "name":"text12",
+      "no":"00012",
+      "state":"0",
+    },{
+      "name":"text13",
+      "no":"00013",
+      "state":"0",
+    },{
+      "name":"text14",
+      "no":"00014",
+      "state":"0",
+    }]
+  }
+
+  var dataTmpLen = dataTmp.list.length,
+  dataTmpList = dataTmp.list,
+  PrizeTmpLen = dataTmp.PrizeList.length,
+  PrizeTmpList = dataTmp.PrizeList,
+  ItemWidth = 134,
+  ItemHeight = 134,
+  ItemSpaceLeft = 3;
+  ItemX= 0,ItemY= 0,
+  k= 0,
+  m = 0,
+  listCont = 5,
+  dataDom = "",
+  PrizeDom = "",
+  XArray = [],
+  YArray = [];
+
+
+
+  //Math.random;
+  var timeLtimes,
+  RunLtimes,
+  RunNingLtimes,
+  RollCountLen,
+  flag= true,
+  flagEnd = false,
+  LastLuckyStar ="L0001",
+  LastPrizeItem ="0001",
+  RunStartTime = 300000,
+  RunSpeedStart = 100,
+  RunSpeedEnd = 500,
+  RunSpeedRunning = 30,
+  RollTime = 5000,//roll total time
+  RollEndTime = 3000;
+
+  var $rollItem,ResultNowDom = "";
+
+
+
+  //LuckyStar Dom;
+  for(var i =0; i <dataTmpLen;i++){
+    if(i % listCont == 0){
+      ItemY = k*(ItemHeight+ItemSpaceLeft);
+      m = 0;
+      k++;
+    }
+    ItemX = m* (ItemWidth+ItemSpaceLeft);
+    XArray.push(ItemX);
+    YArray.push(ItemY);
+    dataDom +="<div style='left:"+ItemX+"px;top:"+ItemY+"px' id='LuckyNo"+dataTmpList[i].no+"' luckyNo='L"+dataTmpList[i].no+"'><img src='Media/defaultImg.png' alt=''><span>"+dataTmpList[i].name+"</span></div>";
+    m++;
+  };
+
+  $(".luckyStarList, .lotteryBody").height(k*ItemHeight);
+
+  //Prize Dom
+  for(var i =0; i <PrizeTmpLen;i++){
+
+    PrizeDom +='<li luckyItemNO="'+PrizeTmpList[i].ItemNo+'">'+
+              '<div class="luckyStarName"><img src="Media/defaultImg.png" alt=""/></div>'+
+              '<div class="PrizeItem"><img src="Media/prize.jpg" alt=""/></div>'+
+              '<h3>'+PrizeTmpList[i].name+'</h3>'+
+              '<p>'+PrizeTmpList[i].text+'</p>'+
+            '</li>';
+  };
+
+  /*checkLastLuckyStar*/
+
+
+  function GetRnd(dataTmpLen){
+    return parseInt(Math.random()*dataTmpLen);
+  };
+
+  function StartBtn(RollCountLen,mode){
+     InteractionAnimate(RollCountLen,mode);
+     timeLtimes = self.setInterval(function(){
+        GetResult();
+     },RunStartTime);
+  };
+
+  function GetResult(){
+      flag = true;
+      //clearInterval(timeLtimes);
+      //alert(GetRnd(dataTmpLen));
+      
+      /*$.ajax({
+        url: '/path/to/file',
+        type: 'post',
+        data: {param1: 'value1'},
+      })
+      .done(function() {
+        flag = true
+        console.log("success");
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });*/
+  };
+
+  function OpenResult(mode){
+      switch(mode)
+        {
+        case 0:
+          var LuckyStarNowId = $("#lotteryBody div.RunningCurrent").prop("id"),
+          luckyNo = $("#"+LuckyStarNowId).attr("luckyNo"),
+          luckyName = $("#"+LuckyStarNowId+" span").text();
+
+          $("#lotteryBody div").each(function(index, el) {
+              if(!$(this).hasClass('RunningCurrent')){
+                $(this).fadeOut('slow');
+              }
+          });
+          setTimeout("RollPrizeDom('"+LuckyStarNowId+"')",4000);
+          flag = true;
+          //add Interaction;
+          ResultNowDom +=" <span class='w20'>No.0001</span><span class='w30'>"+luckyName+"</span>"
+          
+          console.log(luckyNo +" / " +luckyName+"/"+mode);
+
+          break;
+        case 1:
+          var PrizeNoNow = $("#luckyPrize .RunningCurrent").attr("luckyitemno"),
+          PrizeNameNow = $("#luckyPrize .RunningCurrent h3").text(),
+          PrizeTextNow = $("#luckyPrize .RunningCurrent p").text();
+
+          $("#luckyPrize ul li").each(function(index, el) {
+              if(!$(this).hasClass('RunningCurrent')){
+                $(this).fadeOut('slow');
+              }
+          });
+
+          ResultNowDom +="<span class='w45'>" +PrizeNameNow+"&nbsp;&nbsp;"+PrizeTextNow+"</span>";
+          
+
+          setTimeout(OpenResultList(ResultNowDom),3000);
+
+          console.log(PrizeNoNow +" / " +PrizeNameNow+" / "+PrizeTextNow+"/"+mode);
+          
+          break;
+        };
+  };
+   /*Check last lottery star*/
+  function rollIndex(nowIndex,RollCountLen,mode){
+    nowIndex = parseInt(Math.random()*RollCountLen);
+    var rollCheckNo;
+     switch(mode)
+        {
+        case 0:
+          rollCheckNo = $rollItem.eq(nowIndex).attr("luckyNo");
+          if(rollCheckNo == LastLuckyStar){
+             rollIndex(nowIndex,RollCountLen,mode);
+          }else{
+            return nowIndex;
+          };
+          break;
+        case 1:
+          rollCheckNo = $rollItem.eq(nowIndex).attr("luckyitemno");
+          if(rollCheckNo == LastPrizeItem){
+            console.log(nowIndex);
+             
+             rollIndex(nowIndex,RollCountLen,mode);
+          }else{
+            $rollItem.removeClass("RunningCurrented");
+            return nowIndex;
+          };
+          break;
+        };
+  };
+
+  function RunningRandom(flagEnd,mode,RollCountLen){
+      var lastIndex = "X",
+      nowIndex = 0,
+      count = 0;
+
+      $rollItem.removeClass("RunningCurrent");
+
+      RunNingLtimes = self.setInterval(function(){
+          if(lastIndex != "X"){
+            $rollItem.eq(lastIndex).removeClass("RunningCurrent");
+          };
+          nowIndex = rollIndex(nowIndex,RollCountLen,mode);
+          $rollItem.eq(nowIndex).addClass("RunningCurrent");
+          lastIndex = nowIndex;
+          count ++;
+          if(RunSpeedRunning * count >= RollTime){
+            RunSpeedRunning = RunSpeedEnd;
+            flagEnd = true;
+            clearInterval(RunNingLtimes);
+            RunningRandom(flagEnd,mode,RollCountLen);
+            return;
+          };
+
+          /*remote get result*/
+
+          if(flagEnd){
+            if(RunSpeedRunning * count >= RollEndTime){
+                if(nowIndex==undefined){
+                    count--;
+                }else{
+                  clearInterval(RunNingLtimes);
+                  OpenResult(mode);
+                }
+                
+            }
+          }
+          
+       },RunSpeedRunning);
+  };
+
+
+  function InteractionAnimate(RollCountLen,mode){
+    var runStart = 0;
+    RunLtimes = self.setInterval(function(){
+      if(runStart < RollCountLen){
+        $rollItem.eq(runStart).addClass("RunningCurrent");
+        runStart++;
+      }else{
+        $rollItem.removeClass("RunningCurrent");
+        clearInterval(RunLtimes);
+        RunningRandom(flagEnd,mode,RollCountLen);
+
+      };
+     },RunSpeedStart);
+  };
+  /*Check whether can lottery Now*/
+
+  $("#lotteryButton").on('click', function(event) {
+    if(flag == true){
+      $("#lotteryButton").hide();
+      flag = false;
+      RollCountLen = dataTmpLen;
+      $rollItem = $("#lotteryBody div");
+      StartBtn(dataTmpLen,0);
+    };
+  });
+
+  $("#PrizeButton").on('click', function(event) {
+    if(flag == true){
+      $("#PrizeButton").hide();
+      flag = false;
+      $rollItem = $("#luckyPrize ul li");
+      RollCountLen = PrizeTmpLen;
+      StartBtn(RollCountLen,1);
+    };
+  });
+
+  //dom would be optimal later
+
+  $("#PrizeList ul").html(PrizeDom);
+
+  $("#lotteryBody").html(dataDom);
+
+  $("#PrizeList .PrizeListTitle").html("NO."+dataTmp.lotteryNo+"'s Prize");
+
+  $("#lotteryNo").html("No:&nbsp;"+ dataTmp.lotteryNo+"&nbsp;Lottery Of King ,Medici Software");
+
+  $("#LogHistory").on('click', function(event) {
+      $("#logHistoryList").toggleClass('open');
+  });
+
+  $("#CloseLuckyLog").on('click', function(event) {
+      $("#logHistoryList").toggleClass('open');
+  });
+
+
+    
+}
+
+function RollPrizeDom(LuckyStarNowId){
+      //
+      $("#lotteryBody").slideUp("easeInOutQuad");
+      var LuckyStar = $("#"+LuckyStarNowId).html();
+      $("#luckyStarPeople").html(LuckyStar).slideDown("easeInOutQuad");
+      $("#PrizeButton").show();
+      var LuckyPrize =  $("#PrizeList ul").clone();
+      $("#luckyPrize").html(LuckyPrize);
+      
+}
+
+function OpenResultList(ResultNowDom){
+      $("#logHistoryList").toggleClass('open');
+      $("#logHistoryList .Hlist").prepend("<li class='now'>"+ResultNowDom+"</li>");
+};
+
+</script>
+</body>
+</html>
